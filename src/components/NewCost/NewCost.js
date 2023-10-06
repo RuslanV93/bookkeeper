@@ -1,13 +1,32 @@
 import './NewCost.css';
 import CostForm from './CostForm';
-const NewCost = () => {
+import React, { useState } from 'react';
+const NewCost = (props) => {
+  const [isFormVisible, setIsFormVisible] = useState(false);
   const saveCostDataHandler = (inputCostData) => {
-    console.log(inputCostData);
+    // console.log(inputCostData);
+    const costData = { ...inputCostData, id: Math.random().toString() };
+    props.onAddCost(costData);
+    setIsFormVisible(false);
+  };
+  const inputCostDataHandler = () => {
+    setIsFormVisible(true);
+  };
+  const cancelCostHandler = () => {
+    setIsFormVisible(false);
   };
 
   return (
     <div className="new-cost">
-      <CostForm onSaveCostData={saveCostDataHandler}></CostForm>
+      {!isFormVisible && (
+        <button onClick={inputCostDataHandler}>Добавить новый расход</button>
+      )}
+      {isFormVisible && (
+        <CostForm
+          onSaveCostData={saveCostDataHandler}
+          onCancel={cancelCostHandler}
+        ></CostForm>
+      )}
     </div>
   );
 };

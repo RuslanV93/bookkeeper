@@ -8,3 +8,14 @@
 .costs:hover {
   cursor: default;
 }
+.empty-year {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: aliceblue;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+}
