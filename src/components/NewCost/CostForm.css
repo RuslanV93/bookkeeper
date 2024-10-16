@@ -19,5 +19,7 @@
   max-width: 100%;
 }
 .new-cost__actions {
+  display: flex;
+  gap: 8px;
   text-align: left;
 }

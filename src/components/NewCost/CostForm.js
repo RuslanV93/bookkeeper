@@ -2,29 +2,6 @@ import React, { useState } from 'react';
 import './CostForm.css';
 
 const CostForm = (props) => {
-  // const [name, setName] = useState('');
-  // const [sum, setSum] = useState('');
-  // const [date, setDate] = useState('');
-  // const [userInput, setUserUnput] = useState({
-  //   name: '',
-  //   amount: '',
-  //   date: '',
-  // });
-  // const nameChangeHandler = (event) => {
-  //   setUserUnput((previoutState) => {
-  //     return { ...userInput, name: event.target.value };
-  //   });
-  // };
-
-  // const amountChangeHandler = (event) => {
-  //   setUserUnput({ ...userInput, amount: event.target.value });
-  //   console.log(event.target.value);
-  // };
-
-  // const dateChangeHandler = (event) => {
-  //   setUserUnput({ ...userInput, date: event.target.value });
-  //   console.log(event.target.value);
-  // };
   const [name, setName] = useState('');
   const [amount, setAmount] = useState('');
   const [date, setDate] = useState('');
@@ -71,7 +48,7 @@ const CostForm = (props) => {
           <input
             type="date"
             min="2019-01-01"
-            max="2023-12-31"
+            max="2030-12-31"
             value={date}
             onChange={dateChangeHandler}
           />
